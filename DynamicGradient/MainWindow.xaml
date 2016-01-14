@@ -1,0 +1,17 @@
+﻿<Window x:Class="DynamicGradient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DynamicGradient"
+        mc:Ignorable="d"
+        Title="In Some Gucci Flip Flops" Height="350" Width="525" MinWidth="{Binding ActualWidth, ElementName=lblFilename}" MinHeight="50">
+    <Grid>
+        <Image x:Name="image" Margin="100,10,100,42.96" Width="200" Height="200"/>
+        <Label x:Name="lblFilename" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="18.667"/>
+        <Border BorderThickness="1" CornerRadius="3" Cursor="Hand" x:Name="button" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Background="Transparent" BorderBrush="{Binding Foreground, ElementName=label}" MouseDown="button_Click">
+            <Label x:Name="label" Content="Choose Image..." BorderBrush="Black" />
+        </Border>
+
+    </Grid>
+</Window>
